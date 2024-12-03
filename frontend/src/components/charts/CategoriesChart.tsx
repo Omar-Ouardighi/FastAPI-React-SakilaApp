@@ -1,6 +1,6 @@
 "use client"
 
-import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts"
 import { useState, useEffect } from "react"
 
 import {
@@ -70,7 +70,6 @@ export function CategoriesChart() {
               right: 16,
             }}
           >
-            <CartesianGrid horizontal={false} />
             <YAxis
               dataKey="category"
               type="category"
