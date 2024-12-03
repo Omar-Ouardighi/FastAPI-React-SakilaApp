@@ -23,7 +23,7 @@ interface CustomerData {
   total_spent: number;
 }
 
-export function TopCustomersChart() {
+export  function TopCustomersChart() {
   const [chartData, setChartData] = useState<CustomerData[]>([]);
 
   useEffect(() => {

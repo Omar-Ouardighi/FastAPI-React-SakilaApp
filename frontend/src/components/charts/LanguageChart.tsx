@@ -24,7 +24,7 @@ interface LanguageData {
   films: number;
 }
 
-export function LanguageChart() {
+export  function LanguageChart() {
   const [chartData, setChartData] = useState<LanguageData[]>([]);
 
   useEffect(() => {

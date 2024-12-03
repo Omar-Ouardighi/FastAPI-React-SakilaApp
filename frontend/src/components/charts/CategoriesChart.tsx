@@ -23,7 +23,7 @@ interface CategoryData {
   films: number;
 }
 
-export function CategoriesChart() {
+export  function CategoriesChart() {
   const [chartData, setChartData] = useState<CategoryData[]>([]);
 
   useEffect(() => {

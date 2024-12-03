@@ -15,7 +15,7 @@ interface KPIData {
   };
 }
 
-const DashboardPage = () => {
+export default function DashboardPage() {
   const [kpiData, setKpiData] = useState<KPIData | null>(null);
 
   useEffect(() => {
@@ -78,4 +78,3 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;

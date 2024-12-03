@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --radius: 0.5rem;
-  }
-}
-
 /* Sapphire */
 @layer base {
   :root {
