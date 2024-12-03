@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {Column as ColumnType, User} from "@/components/DragDrop/types"
 import { Column } from "@/components/DragDrop/Column";
+import { DndContext, DragEndEvent } from "@dnd-kit/core";
 
 
 const COLUMNS: ColumnType[] = [
@@ -19,9 +20,24 @@ const INITIAL_USERS: User[] = [
 
 export default function UsersPage() {
   const [users, setUsers] = useState(INITIAL_USERS)
+
+  function handleDragEnd(event:DragEndEvent) {
+    const {active, over} = event;
+    if (!over) return;
+
+    const userId = active.id as string;
+    const newStatus = over.id as User['status']
+
+    setUsers(() => 
+      users.map((user) =>
+      user.id === userId ? {...user, status:newStatus} : user )
+    );
+  }
+
   return (
     <div className="p-4">
       <div className="flex gap-8 fill-white justify-center">
+        <DndContext onDragEnd={handleDragEnd} >
         {
           COLUMNS.map((column) => {
             return (
@@ -31,6 +47,8 @@ export default function UsersPage() {
             users={users.filter((user) => user.status === column.id)}/>)
           })
         }
+        </DndContext>
+        
       </div>
 
     </div>
