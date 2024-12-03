@@ -56,7 +56,7 @@ export  function TopCustomersChart() {
     <Card>
       <CardHeader>
         <CardTitle>Top Customers</CardTitle>
-        <CardDescription>Top 10 customers by total spending</CardDescription>
+        <CardDescription>Top 5 customers by total spending</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

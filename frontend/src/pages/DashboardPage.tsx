@@ -65,7 +65,6 @@ export default function DashboardPage() {
       </div>
 
 
-      {/* Rest of your dashboard content */}
       <div className="grid md:grid-cols-3 gap-4" >
       <LanguageChart/>
       <CategoriesChart/>

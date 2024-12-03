@@ -104,7 +104,7 @@ async def get_films_by_category(db: Session = Depends(get_db)):
 
 @app.get("/top-customers")
 async def get_top_customers(db: Session = Depends(get_db)):
-    """Get top 10 customers by total payments"""
+    """Get top 5 customers by total payments"""
     query = text("""
         SELECT 
             CONCAT(c.first_name, ' ', c.last_name) as customer_name,

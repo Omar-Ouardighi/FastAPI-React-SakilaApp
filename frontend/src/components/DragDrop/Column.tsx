@@ -16,9 +16,11 @@ export function Column({ column, users }: ColumnProps) {
       <div className="flex w-80 flex-col rounded-lg bg-neutral-800 p-4">
         <h2 className="mb-4 font-semibold text-neutral-100">{column.title}</h2>
         <div ref={setNodeRef} className="flex flex-1 flex-col gap-4">
-          {users.map(user => {
-            return <UserCard user={user}/>
-          })}
+          {users
+            .sort((a, b) => b.lastActive - a.lastActive)
+            .map(user => {
+              return <UserCard key={user.id} user={user}/>
+            })}
         </div>
       </div>
     );

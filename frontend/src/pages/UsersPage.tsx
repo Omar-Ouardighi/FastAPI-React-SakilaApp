@@ -10,12 +10,12 @@ const COLUMNS: ColumnType[] = [
 ]
 
 const INITIAL_USERS: User[] = [
-  {id: 'user1', status: 'ACTIVE', name: 'John Doe'},
-  {id: 'user2', status: 'NON_ACTIVE', name: 'Jane Smith'},
-  {id: 'user3', status: 'ACTIVE', name: 'Michael Johnson'},
-  {id: 'user4', status: 'NON_ACTIVE', name: 'Emily Davis'},
-  {id: 'user5', status: 'ACTIVE', name: 'William Taylor'},
-  {id: 'user6', status: 'NON_ACTIVE', name: 'Sarah Lee'}
+  {id: 'user1', status: 'ACTIVE', name: 'John Doe', lastActive: Date.now()},
+  {id: 'user2', status: 'NON_ACTIVE', name: 'Jane Smith', lastActive: Date.now()},
+  {id: 'user3', status: 'ACTIVE', name: 'Michael Johnson', lastActive: Date.now()},
+  {id: 'user4', status: 'NON_ACTIVE', name: 'Emily Davis', lastActive: Date.now()},
+  {id: 'user5', status: 'ACTIVE', name: 'William Taylor', lastActive: Date.now()},
+  {id: 'user6', status: 'NON_ACTIVE', name: 'Sarah Lee', lastActive: Date.now()}
 ]
 
 export default function UsersPage() {
@@ -30,7 +30,7 @@ export default function UsersPage() {
 
     setUsers(() => 
       users.map((user) =>
-      user.id === userId ? {...user, status:newStatus} : user )
+      user.id === userId ? {...user, status:newStatus, lastActive: Date.now()} : user )
     );
   }
 
