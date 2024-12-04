@@ -31,10 +31,8 @@ export  function TopCustomersChart() {
       try {
         const response = await fetch('http://localhost:8000/top-customers');
         const data = await response.json();
-        setChartData(data.customers.map((name: string, index: number) => ({
-          customer_name: name,
-          total_spent: data.spending[index]
-        })));
+        console.log(data)
+        setChartData(data);
       } catch (error) {
         console.error('Error fetching top customers data:', error);
       }
