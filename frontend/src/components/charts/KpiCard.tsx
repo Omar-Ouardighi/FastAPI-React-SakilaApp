@@ -7,7 +7,7 @@ interface KPICardProps {
 
 export  function KPICard({ title, value, icon }: KPICardProps) {
   return (
-    <div className="rounded-xl bg-whiteshadow dark:border-zinc-800 dark:bg-zinc-950 backdrop-blur-sm p-8 ring-1 ring-white/10">
+    <div className="rounded-xl bg-whiteshadow border-zinc-800 bg-zinc-950 backdrop-blur-sm p-8 ring-1 ring-white/10">
       <div className="flex items-center justify-between">
         <p className="text-sm text-gray-400">{title}</p>
         {icon}

@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import UsersPage from './pages/UsersPage';
 import { Button } from "./components/ui/button";
-
 import DashboardPage from './pages/DashboardPage';
 
 function App() {

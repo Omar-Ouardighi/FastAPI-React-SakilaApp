@@ -4,7 +4,7 @@ export type User = {
   id: string;
   status: UserStatus;
   name: string;
-  lastActive: number; // Add lastActive timestamp
+  lastActive: number; //  lastActive timestamp in order to sort the users later
 };
 
 export type Column = {
